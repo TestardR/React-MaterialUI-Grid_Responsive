@@ -1,24 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Grid, Hidden } from '@material-ui/core';
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Grid container style={{ height: '100vh' }} justify="space-around">
+        <Grid item style={{ backgroundColor: 'pink' }} md={4} sm={6}>
+          Hello
+        </Grid>
+        <Grid item style={{ backgroundColor: 'green' }} md={4} sm={6}>
+          World
+        </Grid>
+        <Hidden smDown>
+          <Grid item style={{ backgroundColor: 'blue' }} md={4}>
+            Really
+          </Grid>
+        </Hidden>
+      </Grid>
     </div>
   );
 }
